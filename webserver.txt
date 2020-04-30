@@ -1,0 +1,109 @@
+
+Webserver:
+
+-> Setup:
+
+* Machine (linux or windows or unix)
+* Setup webserver ( apache http server or Nginx)
+* Copy the webpages to document root
+* start the webserver
+* open 80 (HTTP)
+* Access the webpages http://localhost
+
+
+
+
+
+65,536
+
+
+Vendors:
+
+* APache Webserver or Apache HTTP sever
+* Nginx HTTP server or Reverse proxy server
+
+
+Apache Webserver:
+
+
+Redhat-
+   
+   # yum install httpd
+
+  /etc/httpd/ -> all conf (SERVER ROOT)
+
+  conf -> /var/www/html (DOCUMENT ROOT)
+
+
+  copy the webpages to doc root
+
+   cp
+   scp
+   git repo 
+
+  start the webserver service (daemon)
+
+   # service <service name> status
+   # service httpd  status
+   # service httpd  start
+              ""    restart
+              ""    stop
+              ""    reload
+
+  Open the PORT 80
+  firewall:
+
+  * IPTABLES common f/w
+
+  * centos:- firewalld
+
+  Access: 
+      http://ip or http://domain-name/
+      or 
+      http://localhost
+
+Debian- ( ubuntu)
+
+   # apt-get install apache2
+
+  /etc/apache2/ -> all conf (SERVER ROOT)
+
+  conf -> /var/www/html (DOCUMENT ROOT)
+
+  copy the webpages to doc root
+
+   cp
+   scp
+   git repo 
+
+
+  start the webserver service (daemon)
+
+   # service <service name> status
+   # service apache2  status
+   # service apache2  start
+              ""     restart
+              ""     stop
+              ""     reload
+
+  Open the PORT 80
+  firewall:
+
+  * IPTABLES common f/w
+  
+  * UFW - uncomplicated firewall
+
+   # ufw status 
+    ->  disabled -> no security all ports are opened (# ufw enable)
+    -> enabled   -> secure all ports are closed (# ufw disable)
+
+    # ufw allow 80
+
+  Access: 
+      http://ip or http://domain-name/
+      or 
+      http://localhost
+
+
+
+# git clone https://github.com/bharathpantala/bharath-sites.git
